@@ -1,0 +1,10 @@
+version: '3'
+services:
+    sbt:
+        container_name: sbt-server
+        build: sbt-docker
+        stdin_open: true
+        tty: true
+        volumes:
+            - ./app:/app
+            - ./jars:/app/jars
